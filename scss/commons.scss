@@ -1,0 +1,73 @@
+.black{
+	background-color: rebeccapurple;
+	opacity: 1;
+}
+
+li{
+	display: inline-block;
+	text-align: right;
+}
+	
+#selectores div ul li a:first-child{
+	background-color:green;
+	width:33.3%;
+	height: 60px;
+	border:none;
+	display:flex;
+justify-content:center;
+align-items:center;
+
+}
+  
+
+
+#selectores div ul li a :nth-child(2){
+	background-color: black;
+	width:33.3%;
+	height: 60px;
+	border:none;
+       display:flex;
+justify-content:center;
+align-items:center;
+
+}
+ #selectores div ul li a :nth-child(3){
+	background-color:#8D3080;
+	width:33.3%;
+	height: 60px;
+	border:none;
+        display:flex;
+justify-content:center;
+align-items:center;
+
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Gantari:wght@200&display=swap');
+h1,
+h2{
+font-family: 'Gantari', sans-serif;}
+
+@mixin color($background,$margin,$text){
+	background:blueviolet;
+	margin: auto;
+	text-align: right;
+}
+li a:hover{
+	@include color(blueviolet, auto, rigth);
+}
+
+
+$colores:(
+'1': blueviolet,
+'2': gray,
+'3': black,
+'4': rebeccapurple,
+'5': #8D3080,
+'6': green,
+
+);
+
+h1{
+	background-color: map-get($colores,$key:'2')
+}
